@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Tools</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82E2EC6F-3A71-4832-8DEE-398555CC156E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <OutputPath>.mono\temp\bin\$(Configuration)</OutputPath>
+    <RootNamespace>GameTemplate</RootNamespace>
+    <AssemblyName>GameTemplate</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <GodotProjectGeneratorVersion>1.0.7374.16792</GodotProjectGeneratorVersion>
+    <BaseIntermediateOutputPath>.mono\temp\obj</BaseIntermediateOutputPath>
+    <IntermediateOutputPath>$(BaseIntermediateOutputPath)\$(Configuration)</IntermediateOutputPath>
+    <ApiConfiguration Condition=" '$(Configuration)' != 'Release' ">Debug</ApiConfiguration>
+    <ApiConfiguration Condition=" '$(Configuration)' == 'Release' ">Release</ApiConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>portable</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Tools|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>$(GodotDefineConstants);GODOT;DEBUG;TOOLS;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GodotSharp">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="GodotSharpEditor" Condition=" '$(Configuration)' == 'Tools' ">
+      <Private>False</Private>
+      <HintPath>$(ProjectDir)/.mono/assemblies/$(ApiConfiguration)/GodotSharpEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\EventManager.cs" />
+    <Compile Include="Core\Extensions.cs" />
+    <Compile Include="Core\GuiBrain.cs" />
+    <Compile Include="Core\InputBind.cs" />
+    <Compile Include="Core\Settings\Settings.cs" />
+    <Compile Include="Core\Settings\SettingsEnums.cs" />
+    <Compile Include="Core\Settings\SettingsManager.cs" />
+    <Compile Include="Core\StaticSerializer.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="GUI\BindingPopup\Popup.cs" />
+    <Compile Include="GUI\FadeLayer\FadeLayer.cs" />
+    <Compile Include="GUI\FadeLayer\FadeState.cs" />
+    <Compile Include="GUI\HTML5Focus\HtmlFocus.cs" />
+    <Compile Include="GUI\OptionsMenu\OptionsMenu.cs" />
+    <Compile Include="GUI\OptionsSections\Languages.cs" />
+    <Compile Include="GUI\OptionsSections\OptionsControls.cs" />
+    <Compile Include="GUI\OptionsSections\OptionsMain.cs" />
+    <Compile Include="GUI\PauseLayer\PauseLayer.cs" />
+    <Compile Include="Levels\Level.cs" />
+    <Compile Include="Levels\Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TitleScreen\MainMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GUI\BindingPopup\CancelButtonStyle_hover.tres" />
+    <None Include="GUI\BindingPopup\CancelButtonStyle_normal.tres" />
+    <None Include="GUI\BindingPopup\CancelButtonStyle_pressed.tres" />
+    <None Include="GUI\BindingPopup\Popup.tscn" />
+    <None Include="GUI\Buttons\ButtonStyle_Focussed.tres" />
+    <None Include="GUI\Buttons\ButtonStyle_Hover.tres" />
+    <None Include="GUI\Buttons\ButtonStyle_Normal.tres" />
+    <None Include="GUI\Buttons\ButtonStyle_Pressed.tres" />
+    <None Include="GUI\Buttons\DefaultButton.tscn" />
+    <None Include="GUI\Buttons\OptionsButton.tscn" />
+    <None Include="GUI\Buttons\OptionsSlider.tscn" />
+    <None Include="GUI\Buttons\OptionsToggle.tscn" />
+    <None Include="GUI\FadeLayer\FadeLayer.tscn" />
+    <None Include="GUI\HUD\HUD.tscn" />
+    <None Include="GUI\OptionsMenu\OptionsMenu.tscn" />
+    <None Include="GUI\OptionsSections\DarkerPanel.tres" />
+    <None Include="GUI\OptionsSections\OptionsControls.tscn" />
+    <None Include="GUI\OptionsSections\OptionsMain.tscn" />
+    <None Include="GUI\PauseLayer\PauseLayer.gd" />
+    <None Include="GUI\PauseLayer\PauseLayer.tscn" />
+    <None Include="GUI\ReBindSection\ActionBind.tscn" />
+    <None Include="GUI\ReBindSection\AddActionStyle_Hover.tres" />
+    <None Include="GUI\ReBindSection\AddActionStyle_Normal.tres" />
+    <None Include="GUI\ReBindSection\AddActionStyle_Pressed.tres" />
+    <None Include="GUI\ReBindSection\ControlBind.tscn" />
+    <None Include="GUI\ReBindSection\RemoveActionStyle_Hover.tres" />
+    <None Include="GUI\ReBindSection\RemoveActionStyle_Normal.tres" />
+    <None Include="GUI\ReBindSection\RemoveActionStyle_Pressed.tres" />
+    <None Include="Levels\TestScene.tscn" />
+    <None Include="Localization\Localization.csv" />
+    <None Include="Localization\Localization.csv.import" />
+    <None Include="Localization\Localization.de.translation" />
+    <None Include="Localization\Localization.en.translation" />
+    <None Include="Localization\Localization.es.translation" />
+    <None Include="Localization\Localization.fr.translation" />
+    <None Include="Localization\Localization.it.translation" />
+    <None Include="Localization\Localization.lv.translation" />
+    <None Include="Localization\Localization.pt_BR.translation" />
+    <None Include="Localization\Localization.ru.translation" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

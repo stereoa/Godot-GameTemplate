@@ -1,0 +1,6 @@
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Tools\GameTemplate.csprojAssemblyReference.cache
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Tools\GameTemplate.dll
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Tools\GameTemplate.pdb
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Tools\GameTemplate.dll
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Tools\GameTemplate.pdb
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Tools\GameTemplate.csproj.CoreCompileInputs.cache

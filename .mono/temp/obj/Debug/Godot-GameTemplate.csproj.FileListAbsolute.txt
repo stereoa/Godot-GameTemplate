@@ -1,0 +1,7 @@
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Debug\godot-dodge.dll
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Debug\godot-dodge.pdb
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Debug\Godot-GameTemplate.csproj.CopyComplete
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Debug\godot-dodge.dll
+C:\Users\Geoff\source\repos\Godot-GameTemplate\.mono\temp\obj\Debug\godot-dodge.pdb
